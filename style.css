@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    background-color:hsl(0, 0%, 98%);
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    display: grid;
+    place-items: center;
+}
+header{
+    place-items: center;
+    font-weight: 300;
+}
+header .title{
+    color: hsl(212, 6%, 44%);
+    font-size: 25px;
+}
+.manager{
+    color: hsl(234, 12%, 34%);
+    font-weight: bold;
+    font-size: 25px;
+}
+.des{
+    text-align: center;
+    font-size: 15px;
+    width: 70%;
+}
+.main{
+    inline-size: 100%;
+    display: grid;
+    
+    gap: 25px;
+    margin-top: 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "a" "b" "c" "d";
+
+   
+
+    > :nth-child(1){
+    grid-area: a;
+}
+> :nth-child(2){
+    grid-area: b;
+}
+> :nth-child(3){
+    grid-area: c;
+}
+> :nth-child(4){
+    grid-area: d;
+}
+}
+.main div{
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 25px auto;
+    padding: 29px 25px;
+    font-size: 12px;
+    box-shadow: 0px 5px 10px 0px rgba(216,226,238,.75);
+}
+.main div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(216,226,238,.85);
+  transition: all 0.3s ease;
+}
+
+h1{
+    color: hsl(234, 12%, 34%);
+}
+p{
+    color: hsl(212, 6%, 44%);
+}
+.card1{
+    border-top: 3px solid hsl(180, 62%, 55%);
+}
+.card2{
+    border-top: 3px solid hsl(0, 78%, 62%);
+}
+.card3{
+    border-top: 3px solid hsl(34, 97%, 64%);
+}
+.card4{
+    border-top: 3px solid hsl(212, 86%, 64%);
+}
+img{
+    display: block;
+    margin-left: auto;
+    width: 50px;
+    height: 50px;
+}
+p{
+    color: hsl(212, 6%, 44%);
+    font-size: 13px;
+    letter-spacing: .5px;
+    line-height: 1.8;
+    margin: 12px 0 36px 0;
+}
+ @media (min-width: 700px) {
+    .main{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas:
+                        ". a a . "
+                        "b b c c " 
+                        ". d d . " ;
+    }
+    }    
+@media (min-width: 1440px) {
+           .main{
+                grid-template-columns: repeat(3,1fr);
+                grid-template-areas:
+                        ". b . "
+                        "a b d" 
+                        "a c d"
+                        ". c . " ;
+           }
+           .des{
+            width: 60%;
+           }
+    }
